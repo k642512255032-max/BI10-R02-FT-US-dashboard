@@ -1,0 +1,19 @@
+# Customer Intelligence Engine — FT-US · BI10 Round 2
+# Pinned to the exact stack the dashboard was built and verified on (Python 3.11.9, Windows).
+# Verified: all 6 pages, 31 Plotly charts, chart-click filtering and the Reset button,
+# in both Light Mode and an emulated browser Dark Mode.
+streamlit==1.66.0
+plotly==7.1.0
+pandas==3.0.6
+numpy==2.4.6
+pyarrow==26.0.0
+
+# --- Older stacks also work -------------------------------------------------------------------
+# app.py probes its own dependencies at import time and degrades gracefully, so if a deployment
+# target cannot resolve the pins above, these floors are safe to use instead:
+#
+#   streamlit>=1.32      # <1.35 loses chart-click filtering (CAN_SELECT); <1.46 uses use_container_width
+#   plotly>=5.18         # <5.23 loses bold axis titles (font.weight); everything else is identical
+#   pandas>=2.0
+#   numpy>=1.24
+#   pyarrow>=14          # only needed for the .parquet sample; the bundled .csv.gz works without it

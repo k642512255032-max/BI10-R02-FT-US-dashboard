@@ -1,0 +1,28 @@
+# local tooling / editor
+.claude/
+.vscode/
+.idea/
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+
+# os
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# scratch
+*.log
+*.tmp
+ft_us_campaign_list.csv
+
+# the full 1,000,528-row output is far too large for git — the repo ships the
+# 50,000-row stratified sample instead (see README)
+customer_scores_nba.csv
+customer_scores_nba.csv.gz
+customer_scores_nba.parquet
